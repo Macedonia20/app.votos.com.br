@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from "react";
-import api from '../services/api';
-
+import React from "react";
 import { CardBody, CardImg } from "reactstrap";
-import { Card, Row, Col } from "react-bootstrap"
-import { Header } from './Header'
-import { Answer } from './Modal'
-import { Perfil } from './Footer'
-
+import { Card, Row, Col } from "react-bootstrap";
+import { Answer } from './Modal';
+import { Perfil } from './Footer';
 import marciaImg from "../bg/marcia.jpeg";
 import diogoImg from "../bg/pr-diogo.jpg";
 import betoImg from "../bg/beto.jpeg";
@@ -120,29 +116,29 @@ const professores = [
 
 const Enquente = () => {
   return (
-    <>
-    <Row xs={1} md={5} className="g-4"  style={{marginLeft: '82px'}}>
-       {professores.map((professor) => (
-        <Col className="p-3" key={professor.id}>
-          <Card style={{ orderRadius:10, width: 200,  bg: 'purple' }}>
-            <CardBody style={{ borderRadius: 25, height: 240 }}>
-              <CardImg
-                top className="img-fluid"
-                src={professor.image}
-                style={{ borderRadius:10, marginLeft: 29, width: 95, height: 95 }}
-              />
-                <h6 className="text-center mt-2">
-                  {professor.nome}
-                </h6>
-                <Answer candidato={professor.nome} />
-            </CardBody>
-          </Card>       
-        </Col>
-       ))}
-    </Row>
-    <Perfil />
-
-    </>
+    <div className="m-content">
+      <h1 className="mt-3 text-light text-center">Votação capacitacao destino</h1>
+      <Row md={5}>
+        {professores.map((professor) => (
+          <Col className="p-4 d-flex flex-column justify-content-center align-items-center" key={professor.id}>
+            <Card className="card-hover" style={{ width: 200 }}>
+              <CardBody className="d-flex flex-column justify-content-center align-items-center" style={{ height: 240 }}>
+                <CardImg
+                  top className="img-fluid"
+                  src={professor.image}
+                  style={{ borderRadius: 10, width: 95, height: 95 }}
+                />
+                  <h6 className="text-center mt-2">
+                    {professor.nome}
+                  </h6>
+                  <Answer candidato={professor.nome} />
+              </CardBody>
+            </Card>       
+          </Col>
+        ))}
+      </Row>
+      <Perfil />
+    </div>
   );
 };
 
