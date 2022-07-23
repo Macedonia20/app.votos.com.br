@@ -4,6 +4,7 @@ import { Card, Row, Col } from "react-bootstrap";
 import { Answer } from './Modal';
 import { Perfil } from './Footer';
 import marciaImg from "../bg/marcia.jpeg";
+import adrianoImg from "../bg/adriano.jpg";
 import diogoImg from "../bg/pr-diogo.jpg";
 import betoImg from "../bg/beto.jpeg";
 import anaImg from "../bg/anaa.jpg";
@@ -12,6 +13,7 @@ import biaImg from "../bg/bia.jpeg";
 import daniImg from "../bg/dani.jpg";
 import flaviaImg from "../bg/flavia.jpg";
 import ingridImg from "../bg/ingrid.jpg";
+import kokuraImg from "../bg/kokura.jpg";
 import julianaImg from "../bg/juliana.jpg";
 import luanaImg from "../bg/luana.jpg";
 import reneImg from "../bg/rene.jpeg";
@@ -112,12 +114,20 @@ const professores = [
   nome: 'Tchesco Lu',
   image: tchescoImg,
   id: 20
+},{
+  nome: 'Adriano Ramos',
+  image: adrianoImg,
+  id: 21
+},{
+  nome: 'Ana Kokura ',
+  image: kokuraImg,
+  id: 22
 }];
 
 const Enquente = () => {
   return (
     <div className="m-content">
-      <h1 className="mt-3 text-light text-center">Votação capacitacao destino</h1>
+      <h1 className="mt-3 text-light text-center">Votação capacitação destino</h1>
       <Row md={5}>
         {professores.map((professor) => (
           <Col className="p-4 d-flex flex-column justify-content-center align-items-center" key={professor.id}>
