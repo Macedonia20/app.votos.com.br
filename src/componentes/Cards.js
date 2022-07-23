@@ -127,7 +127,7 @@ const professores = [
 const Enquente = () => {
   return (
     <div className="m-content">
-      <h1 className="mt-3 text-light text-center">Votação capacitação destino</h1>
+      <h1 className="mt-3 text-light text-center">Votação Capacitação Destino</h1>
       <Row md={5}>
         {professores.map((professor) => (
           <Col className="p-4 d-flex flex-column justify-content-center align-items-center" key={professor.id}>
